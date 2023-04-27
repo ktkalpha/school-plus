@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Text, List, ListItem, Center, VStack } from "@chakra-ui/react";
+import { Text, List, ListItem, VStack } from "@chakra-ui/react";
 
 function LunchViewer() {
   let regex = /\([^)]*\)/i;
@@ -34,20 +34,18 @@ function LunchViewer() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [dateString]);
   return (
-    <Center>
-      <VStack>
-        <Text fontSize="xl">급식</Text>
-        <List>
-          {foodList.map((food, index) => (
-            <ListItem borderWidth="1px" p="1" key={index.toString()}>
-              {food.replace(regex, "")}
-            </ListItem>
-          ))}
-        </List>
-      </VStack>
-    </Center>
+    <VStack>
+      <Text fontSize="xl">급식</Text>
+      <List>
+        {foodList.map((food, index) => (
+          <ListItem borderWidth="1px" p="1" key={index.toString()}>
+            {food.replace(regex, "")}
+          </ListItem>
+        ))}
+      </List>
+    </VStack>
   );
 }
 
