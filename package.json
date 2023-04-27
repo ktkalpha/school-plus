@@ -2,6 +2,7 @@
   "name": "school-plus",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ktkalpha.github.io/school-plus-app/",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
     "@chakra-ui/react": "^2.6.0",
