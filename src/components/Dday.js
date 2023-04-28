@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Text, VStack } from "@chakra-ui/react";
+import "./Dday.css";
 
 function Dday() {
   let [eventList, setEL] = useState([]);
 
+  let [date, foo] = useState(new Date());
+  let [dateString, bar] = useState(
+    `${date.getFullYear().toString()}${(date.getMonth() + 1)
+      .toString()
+      .padStart(2, 0)}${date.getDate().toString().padStart(2, 0)}`
+  );
   function getDday(ds) {
     const edit_ds = `${ds.slice(0, 4)}-${ds.slice(4, 6)}-${ds.slice(6, 8)}`;
     const dday_date = new Date(edit_ds);
@@ -21,10 +27,6 @@ function Dday() {
     }
     return;
   }
-  const date = new Date();
-  const dateString = `${date.getFullYear().toString()}${(date.getMonth() + 1)
-    .toString()
-    .padStart(2, 0)}${date.getDate().toString().padStart(2, 0)}`;
 
   useEffect(() => {
     axios
@@ -74,14 +76,20 @@ function Dday() {
       });
   }, [dateString]);
   return (
-    <VStack>
-      <Text fontSize="xl">D-DAY</Text>
+    <div>
+      <h1>D-Day</h1>
+
+      <br></br>
       {eventList.map((event, index) => (
-        <Text borderRadius="lg" borderWidth="1px" p="1" key={index.toString()}>
-          {event}
-        </Text>
+        <div>
+          <span className="event-item" key={index.toString()}>
+            {event}
+          </span>
+          <br></br>
+          <br></br>
+        </div>
       ))}
-    </VStack>
+    </div>
   );
 }
 

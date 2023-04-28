@@ -1,0 +1,10 @@
+.event-item {
+  /* cool event list item */
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+  cursor: pointer;
+}

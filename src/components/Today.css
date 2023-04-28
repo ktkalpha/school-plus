@@ -1,0 +1,23 @@
+.title {
+  /* italic text */
+  font-style: italic;
+}
+.subtitle {
+  /* text box with white background and shadow, fit content */
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(255, 204, 0, 0.603),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  color: #282c34;
+  width: fit-content;
+  margin: auto;
+}
+
+.today-emoji {
+  /* round border image */
+  border-radius: 50%;
+  /* border color is skyblue */
+  border: 2px solid skyblue;
+}

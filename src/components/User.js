@@ -1,13 +1,8 @@
-import {
-  Editable,
-  EditableInput,
-  EditablePreview,
-  HStack,
-  Image,
-} from "@chakra-ui/react";
 import profile1 from "../images/profile1.png";
 import profile2 from "../images/profile2.png";
 import profile3 from "../images/profile3.png";
+
+import "./User.css";
 
 const fileNames = [profile1, profile2, profile3];
 
@@ -17,47 +12,14 @@ function randomImage() {
 
 function User() {
   return (
-    <>
-      <HStack>
-        <Image
-          boxShadow="dark-lg"
-          borderRadius="20%"
-          boxSize="50px"
-          src={randomImage()}
-        />
-        <Editable
-          defaultValue={
-            localStorage.getItem("name")
-              ? JSON.parse(localStorage.getItem("name"))
-              : "김철수"
-          }
-        >
-          <EditablePreview />
-          <EditableInput
-            onChange={(e) => {
-              localStorage.setItem("name", JSON.stringify(e.target.value));
-            }}
-          />
-        </Editable>
-        <Editable
-          defaultValue={
-            localStorage.getItem("school-number")
-              ? JSON.parse(localStorage.getItem("school-number"))
-              : "1학년 1반 1번"
-          }
-        >
-          <EditablePreview />
-          <EditableInput
-            onChange={(e) => {
-              localStorage.setItem(
-                "school-number",
-                JSON.stringify(e.target.value)
-              );
-            }}
-          />
-        </Editable>
-      </HStack>
-    </>
+    <nav>
+      <input
+        className="profile-text"
+        type="text"
+        defaultValue={"고태경 1학년 7반 3번"}
+      />
+      <img className="profile-img" alt="user profile" src={randomImage()}></img>
+    </nav>
   );
 }
 

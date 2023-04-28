@@ -1,0 +1,20 @@
+nav {
+  padding: 10px;
+  height: 40px;
+  /* one dark black background color */
+  background-color: #282c34;
+}
+.profile-text {
+  border: 0;
+  font-size: 2rem;
+  background-color: #282c34;
+  color: white;
+}
+.profile-img {
+  border-radius: 100%;
+  /* move image to right side navbar */
+  float: right;
+  height: 50px;
+  width: 50px;
+  transform: translateY(-5px);
+}
