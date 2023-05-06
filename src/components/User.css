@@ -1,20 +1,24 @@
 nav {
   padding: 10px;
   height: 40px;
+  display: flex;
+  width: 100vw;
+  justify-content: left;
+  align-items: center;
   /* one dark black background color */
   background-color: #282c34;
 }
 .profile-text {
   border: 0;
   font-size: 2rem;
-  background-color: #282c34;
+  background-color: rgba(0, 0, 0, 0);
   color: white;
+  width: 85vw;
 }
 .profile-img {
   border-radius: 100%;
   /* move image to right side navbar */
-  float: right;
+  /* float: right; */
   height: 50px;
   width: 50px;
-  transform: translateY(-5px);
 }

@@ -13,12 +13,12 @@ function randomImage() {
 function User() {
   return (
     <nav>
+      <img className="profile-img" alt="user profile" src={randomImage()}></img>
       <input
         className="profile-text"
         type="text"
         defaultValue={"고태경 1학년 7반 3번"}
       />
-      <img className="profile-img" alt="user profile" src={randomImage()}></img>
     </nav>
   );
 }

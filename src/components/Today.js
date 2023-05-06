@@ -25,11 +25,11 @@ const day_name = dname_list[new Date().getDay()];
 const day_quote = dqutoes_list[new Date().getDay()];
 function Today() {
   return (
-    <>
+    <div className="today">
       <img className="today-emoji" alt="today emoji" src={day_emo}></img>
       <h1 className="title">{day_name}요일!</h1>
       <h3 className="subtitle">{day_quote}</h3>
-    </>
+    </div>
   );
 }
 

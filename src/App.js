@@ -11,8 +11,10 @@ function App() {
       <User></User>
       <Today></Today>
       <br></br>
-      <Dday></Dday>
-      <LunchViewer></LunchViewer>
+      <div className="menus">
+        <Dday></Dday>
+        <LunchViewer></LunchViewer>
+      </div>
     </div>
   );
 }
